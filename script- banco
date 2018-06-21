@@ -1,0 +1,18 @@
+create table series(
+id int AUTO_INCREMENT PRIMARY KEY,
+titulo varchar(100) not null,
+ano int not null,
+sinopse text not null,
+disponivel int not null,
+temporada int not null
+);
+
+create table comentario(
+id int AUTO_INCREMENT PRIMARY KEY,
+titulo varchar(100) not null,
+temporada int not null,
+episodio int not null,
+data timestamp not null,
+comentario text not null,
+avaliacao int not null,
+);
