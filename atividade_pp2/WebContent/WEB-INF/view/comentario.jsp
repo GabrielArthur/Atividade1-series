@@ -49,7 +49,7 @@
 					</div>	
 
 					<div class="form-group">
-						<label for="temp">Temporas:</label>
+						<label for="temp">Temporada:</label>
 						<input type="number" required name="temporada" class="form-control tamanhoInput" id="temp" placeholder="temp" >
 
 						<label for="ep">Episódio:</label>

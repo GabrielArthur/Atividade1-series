@@ -31,4 +31,23 @@ public class SerieDao {
 				factory.close();
 				return lista;
 	}
+	
+	  public List<Serie> listarPesquisa(Serie serie) {
+			
+			EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+			EntityManager manager = factory.createEntityManager();
+					
+			Query query = null;
+					
+			String titulo =  serie.getTitulo();
+					
+			query = manager.createQuery("FROM Serie WHERE titulo LIKE :paramSerie");
+			query.setParameter("paramSerie", "%" + titulo + "%");
+					
+			List<Serie> lista = query.getResultList();
+					
+			manager.close();
+			factory.close();
+			return lista;
+	}
 }

@@ -44,16 +44,16 @@
 				<form action="salvar" method="post">
 					<div class="form-group">
 						<label for="titulo">Título:</label>
-						<input type="text" required name="titulo" class="form-control" id="titulo" placeholder="Título">
+						<input type="text" required  name="titulo" class="form-control" id="titulo" placeholder="Título">
 					</div>	
 					<div class="form-group tamanhoInput">
 						<label for="data">Ano:</label>
-						<input type="number" required name="ano" class="form-control" id="data">
+						<input type="number" required  maxlength="4" name="ano" class="form-control" id="data">
 					</div>
 
 					<div class="form-group">
 						<label for="sinopse">Sinopse:</label>
-						<textarea name="sinopse" required id="sinopse" placeholder="Digite aqui uma Sinopse" class="form-control"></textarea>
+						<textarea name="sinopse" required id="sinopse" maxlength="1400" placeholder="Digite aqui uma Sinopse" class="form-control"></textarea>
 					</div>
 
 					<div class="form-group ">
@@ -63,8 +63,8 @@
 					</div>
 
 					<div class="form-group tamanhoInput">
-						<label for="temp">Temporada:</label>
-						<input name="qtdetemporada" required type="number" class="form-control" id="temp" placeholder="temp">
+						<label for="temp">Quantidade de Temporadas:</label>
+						<input name="qtdetemporada" required type="number" maxlength="2" class="form-control" id="temp" placeholder="temp">
 					</div>
 					<button  type="submit" class="btn btn-primary" ">Cadastrar Série</button>	
 				</form><br><br>

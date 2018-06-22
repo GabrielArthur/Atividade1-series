@@ -30,7 +30,11 @@ public class SeriesController {
 	}
 
 	@RequestMapping("listarComentarios")
-	public String comentarios() {
+	public String listarComentarios(Comentario comentario, Model model) {
+		ComentarioDao dao = new ComentarioDao();
+		
+		List<Comentario> listaComentario = dao.listar();
+		model.addAttribute("comentarios", listaComentario);
 		return "listarComentarios";
 	}
 
@@ -59,6 +63,15 @@ public class SeriesController {
 		List<Serie> listaSerie = dao.listar();
 		model.addAttribute("series", listaSerie);
 		return "index";
+	}
+	
+	@RequestMapping("pesquisar")
+		public String filtrar(Serie serie, Model model) {
+		SerieDao dao = new SerieDao();
+		
+		List<Serie> listaSerie = dao.listarPesquisa(serie);
+		model.addAttribute("listaSerie", listaSerie);
+		return "filtro";
 	}
 
 }

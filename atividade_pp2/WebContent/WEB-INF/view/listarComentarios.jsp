@@ -47,22 +47,27 @@ div.desc {
 <body>
 
 	<c:import url="menu.jsp" />
-
+<c:forEach var="comentarios" items="${comentarios}">
 		<div class="gallery">
 			<a target="_blank" href="https://go.sevenidiomas.com.br/wp-content/uploads/2017/05/se_seven.png"> <img src="https://go.sevenidiomas.com.br/wp-content/uploads/2017/05/se_seven.png"
 				alt="Cinque Terre" width="300" height="200">
 			</a>
-			<div class="desc">Título: </div>
-			<div class="desc">Temporada: </div>
-			<div class="desc">Episódio: </div>
-			<div class="desc">Comentário: </div>
-			<div class="desc">Avaliação: </div>
+			<div class="desc">Título: ${comentarios.titulo} </div>
+			<div class="desc">Temporada: ${comentarios.temporada} </div>
+			<div class="desc">Episódio: ${comentarios.episodio} </div>
+			<div class="desc">Comentário: ${comentarios.comentario} </div>
+			<div class="desc">Avaliação: <c:choose>
+					<c:when test="${comentarios.avaliacao == 1}">
+					Gostou
+					</c:when>
+					<c:otherwise>
+					Não gostou
+					</c:otherwise>
+				</c:choose> </div>
 			
 		</div>
 
-
-	</div>
-	</div>
+</c:forEach>
 
 
 
