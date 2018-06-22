@@ -1,3 +1,5 @@
+create database atividade_pp2
+
 create table series(
 id int AUTO_INCREMENT PRIMARY KEY,
 titulo varchar(100) not null,
