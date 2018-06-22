@@ -1,4 +1,4 @@
-create database atividade_pp2
+create database atividade_pp2;
 
 create table series(
 id int AUTO_INCREMENT PRIMARY KEY,
